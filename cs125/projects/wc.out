@@ -1,0 +1,28 @@
+Username:  rollers
+Date:      Thu Oct 5 10:52:18 EDT 2017
+ 
+--- Running wc lincoln ---
+ 
+
+Program to calculate the number of newlines,
+words and characters in a file
+You will be asked to enter the name of a file.
+Written by Seth Roller.
+
+Enter the name of a file: 
+
+ 3 275 1473 /home/mathcs/turnin/koch/lincoln.txt
+
+--- Running wc quickbrownfox ---
+ 
+
+Program to calculate the number of newlines,
+words and characters in a file
+You will be asked to enter the name of a file.
+Written by Seth Roller.
+
+Enter the name of a file: 
+
+ 1 9 46 /home/mathcs/turnin/koch/quickbrownfox.txt
+
+ 

@@ -1,0 +1,17 @@
+# File: about.py
+# Date: 9/6/17
+# Author: Seth Roller
+# Purpose: To utilize the print statement to inform Dr. Koch about myself
+
+def main():
+    print()
+    print("Name:       Seth Roller")
+    print("Year:       Sophomore")
+    print("Birthdate:  6/4/1998")
+    print("Cell Phone: 570-505-2236")
+    print("Hobbies:    Chess, skiing and reading")
+    print('Quote:      "Stay groovy!"')
+
+    print()
+
+main()

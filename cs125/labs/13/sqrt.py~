@@ -1,0 +1,43 @@
+# File: sqrt.py
+# Date: 12/5/17
+# Author: Seth Roller
+# Purpose: We will find the square root of a number inputed by a user 
+
+def intro():
+    print()
+    print("This program will calculate the square root")
+    print("of a number using Newton's Method.")
+    print("You will enter the number and the size of the")
+    print("delta between Newton's Method square root")
+    print("and the real square root.")
+    print("Written by John Koch.")
+    print()
+
+
+def getInputs():
+    number = float(input("Enter the number to find its square root: "))
+    print()
+    print()
+    delta = float(input("Enter the delta: "))
+    print()
+    print()
+    return number,delta
+
+def main():
+    intro()
+    number,delta = getInputs()
+    print("For the square root of",number,"after 4 tries")
+    print("with a delta of {0:0}:".format(delta))
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+

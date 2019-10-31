@@ -1,0 +1,73 @@
+# File: histo.py
+# Date: 12/7/17
+# Author: Seth Roller
+# Purpose: To create a histogram to display the academic results of students
+
+from math import *
+
+def intro():
+    print()
+    print("Program to print a histogram of a list of scores.")
+    print("It also produces the high, low, and average score")
+    print("along with the standard deviation.")
+    print("Written by Seth Roller.")
+    print()
+
+def getInput():
+    file = input("Enter the name of the input file: ")
+    print()
+    infile = open(file,"r")
+    listt = []
+    for line in infile:
+        indiv = []
+        indiv = indiv + line.split(" ")
+        listt.append(indiv)
+    return infile,listt
+
+def displaying(listt):
+    numbers = []
+    for r in range(len(listt)):
+        numbers.append(int(listt[r][1]))
+    
+    maximum = max(numbers)
+    minimum = min(numbers)
+    top = 0
+    for b in range(len(numbers)):
+        top = top + numbers[b]
+    avg = top / len(numbers)
+    print("Worst score: {0:12.2f}".format(minimum))
+    print("Best score: {0:13.2f}".format(maximum))
+    print("Average score: {0:10.2f}".format(avg))
+    portion = 0
+    for dev in range(len(numbers)):
+        portion = portion + (numbers[dev] - avg)**2
+    sd = sqrt(portion / (len(numbers) - 1))
+    print("Standard deviation: {0:5.2f}".format(sd))
+    print()
+    print("Name", 12 * " ","Score")
+    print("====", 12 * " ","=====")
+    print()
+    # fix formatting
+    for y in range(len(numbers)):
+        print("{0:10}".format(listt[y][0]), 6 * " ", "{0:0.2f}".format(int(listt[y][1])))
+    print()
+    return numbers
+
+def histogram(numbers):
+    print("Histogram:")
+    print("==========")
+    print()
+    for histo in range(min(numbers),max(numbers) + 1):
+        print("{0:1}: {1:1}".format(histo, numbers.count(histo) * "*" ))                
+    print()
+    
+def main():
+    intro()
+    infile,listt = getInput()
+    numbers = displaying(listt)
+    histogram(numbers)
+    
+if __name__ == "__main__":
+    main()
+        
+    

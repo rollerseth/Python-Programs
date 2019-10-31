@@ -1,0 +1,47 @@
+# File: miles.py
+# Date: 9/14/17
+# Author: Seth Roller
+# Purpose: To use the loop function in Python through a conversion table
+
+def main():
+    print()
+    
+    print("Table of Miles and Kiolmeter Equivalents ")
+    
+    print("Written by Seth Roller")
+    
+    print()
+    
+    print("Miles   Kilometers")
+    
+    print("=====   ==========")
+    
+    # Here is where the conversion variables were stored
+    # mTok = miles to kilometer; vice versa for kTom
+    
+    mTok = 1.609344
+    kTom = 0.621371192
+
+    # Loop function was repeated through a print statement
+
+    for i in range(11):
+        firstColumn = (i) * 10
+        secondColumn = mTok * firstColumn
+        print(" ",firstColumn,"M"," ",secondColumn,"K" )
+        
+    print()
+    
+    print("Kilometers   Miles")
+    
+    print("==========   =====")
+    
+    for i in range(11):
+        thirdColumn = (i) * 10
+        fourthColumn = kTom * thirdColumn
+        print(" ",thirdColumn,"K","      ",fourthColumn, "M")
+        
+    print()
+         
+         
+main()
+    

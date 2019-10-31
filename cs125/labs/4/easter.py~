@@ -1,0 +1,38 @@
+# File: easter.py
+# Date: 9/19/17
+# Author: Seth Roller
+# Purpose: Through a given year we will determine the day and month of Easter
+
+def main():
+    print()
+    print("This program will tell you the Easter date given a year.")
+    print("Written by Seth Roller.")
+    print()
+
+    year = int(input("Please enter a year: "))
+    print()
+    print()
+    
+    A = year % 19
+    B = year % 4
+    C = year % 7
+    D = (19*A + 24) % 30
+    E = (2*B +4*C + 6*D + 5) % 7
+    
+    easterDate = 22 + D + E
+
+    if easterDate <= 31:
+        print("Easter falls on March", easterDate,",",year,".")
+    else: 
+        easterDate = easterDate - 31 
+        print("Easter falls on April", easterDate,",",year,".")
+    
+    print()
+
+    # I ran 3 test cases with the years of 2011, 1995, and 1956
+    # The dates I got were respectively April 24, April 16, April 1
+
+    
+main()               
+
+   

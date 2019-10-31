@@ -1,0 +1,27 @@
+# File: numbers.py
+# Date: 9/5/17
+# Author: Seth Roller
+# Purpose: Try out some python
+
+def main():
+    print()
+    print("Program to try some numbers.")
+    print("Written by Seth Roller.")
+    print()
+
+
+
+
+
+
+
+    print()
+
+main()
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+# File: weights.py                                                             
+# Date: 10/26/17                                                                
+# Author: Seth Roller                                                           
+# Purpose: To utilize multiple functions in one program                         
+
+def calcAverage(totalWeight, numPumpkins):
+
+    average = totalWeight / numPumpkins
+
+    return average
+
+def intro():
+
+    print()
+
+    print("Program to calculate the average of a")
+
+    print("group of pumpkin weights.")
+
+    print("You will be asked to enter the number of")
+
+    print("pumpkins, followed by each pumpkin weight.")
+
+    print("Written by Seth Roller.")
+
+    print()
+
+
+def main():
+
+    intro()
+
+
+
+    numPumpkins = int(input("Enter the number of pumpkins: "))
+
+    print()
+    print()
+    
+
+    var = 0
+
+    totalWeight = 0
+
+
+
+    for i in range(numPumpkins):
+
+        weight = float(input("Enter the weight for pumpkin " + str(var + 1) + ": "))
+        print()
+
+        if weight >= 70:
+
+            print("{0:0.3f} is heavy".format(weight))
+
+        elif weight < 50:
+            print("{0:0.3f} is light".format(weight))
+
+        else:
+            print("{0:0.3f} is normal".format(weight))
+
+        var = var + 1                                                                                                                 
+
+        totalWeight = totalWeight + weight
+
+    average = calcAverage(totalWeight, numPumpkins)
+
+    print("The average weight of the {0} pumpkins is {1:0.3f}".format(numPumpkins, average))
+
+    print()
+
+
+
+main()
